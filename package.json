@@ -1,0 +1,12 @@
+{
+  "name": "mta-sts",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  }
+}
