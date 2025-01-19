@@ -1,6 +1,7 @@
 // index.mjs
 import { createServer } from 'node:http';
 const server = createServer((req, res) => {
+  console.log(req.url);
   if (req.url === '/well-known/mta-sts.txt') {
     const version = 'STSv1';
     const mode = 'enforce';
@@ -24,6 +25,7 @@ max_age: ${max_age}`);
   
 });
 // starts a simple http server locally on port 3000
-server.listen(process.env.PORT || 3000, '127.0.0.1', () => {
-  console.log('Listening on 127.0.0.1:3000');
+const port = process.env.PORT || 3000;
+server.listen(port, '127.0.0.1', () => {
+  console.log('Listening on ${port}');
 });
